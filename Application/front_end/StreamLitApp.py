@@ -39,6 +39,6 @@ for field_name, range in StreamLit_SlideBar["slider_fields"].items():
 
 if st.button('Predict'):
     data = json.dumps(user_options, indent=2)
-    r = requests.post('http://localhost:8002/predict', data=data)
+    r = requests.post('http://159.203.101.120:8008/predict', data=data)
     st.write(user_options)
     st.write(r.json())
