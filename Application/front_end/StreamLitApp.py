@@ -23,7 +23,7 @@ user_options={}
 
 import json
 # json.dump(streamlit_field_data, open("../front_end/streamlit_options.json", "w"), indent=2)
-StreamLit_SlideBar= json.load(open("../front_end/streamlit_options.json"))
+StreamLit_SlideBar= json.load(open("streamlit_options.json"))
 
 for field_name, range in StreamLit_SlideBar["slider_fields"].items():
     min_val, max_val = range
