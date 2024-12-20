@@ -1,9 +1,10 @@
 import math
-# from collections import defaultdict
-# import pandas as pd
 import streamlit as st
 import requests
 import os
+import json
+# from collections import defaultdict
+# import pandas as pd
 # TestData = pd.read_csv("diabetes.csv") 
 
 # slider_fields = [
@@ -17,13 +18,14 @@ import os
 #     'DiabetesPedigreeFunction']
 
 # streamlit_field_data = defaultdict(dict)
-user_options={}
+
 # st.title('Disease Prediction System')
 # for field in slider_fields:
 #     streamlit_field_data["slider_fields"][field] = [math.floor(TestData[field].min()), math.ceil(TestData[field].max())]
 
-import json
 # json.dump(streamlit_field_data, open("../front_end/streamlit_options.json", "w"), indent=2)
+
+user_options={}
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
 file_path = os.path.join(current_dir, "streamlit_options.json")
