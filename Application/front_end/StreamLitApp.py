@@ -1,28 +1,28 @@
 import math
-from collections import defaultdict
-import pandas as pd
+# from collections import defaultdict
+# import pandas as pd
 import streamlit as st
 import requests
-TestData = pd.read_csv("diabetes.csv") 
+# TestData = pd.read_csv("diabetes.csv") 
 
-slider_fields = [
-    'Pregnancies',
-    'Age',
-    'Glucose',
-    'BloodPressure',
-    'SkinThickness',
-    'Insulin',
-    'BMI',
-    'DiabetesPedigreeFunction']
+# slider_fields = [
+#     'Pregnancies',
+#     'Age',
+#     'Glucose',
+#     'BloodPressure',
+#     'SkinThickness',
+#     'Insulin',
+#     'BMI',
+#     'DiabetesPedigreeFunction']
 
-streamlit_field_data = defaultdict(dict)
+# streamlit_field_data = defaultdict(dict)
 user_options={}
-st.title('Disease Prediction System')
-for field in slider_fields:
-    streamlit_field_data["slider_fields"][field] = [math.floor(TestData[field].min()), math.ceil(TestData[field].max())]
+# st.title('Disease Prediction System')
+# for field in slider_fields:
+#     streamlit_field_data["slider_fields"][field] = [math.floor(TestData[field].min()), math.ceil(TestData[field].max())]
 
 import json
-json.dump(streamlit_field_data, open("../front_end/streamlit_options.json", "w"), indent=2)
+# json.dump(streamlit_field_data, open("../front_end/streamlit_options.json", "w"), indent=2)
 StreamLit_SlideBar= json.load(open("../front_end/streamlit_options.json"))
 
 for field_name, range in StreamLit_SlideBar["slider_fields"].items():
