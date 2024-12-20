@@ -3,7 +3,7 @@ from collections import defaultdict
 import pandas as pd
 import streamlit as st
 import requests
-TestData = pd.read_csv("..\..\Model\diabetes.csv") 
+TestData = pd.read_csv("../../Model/diabetes.csv") 
 
 slider_fields = [
     'Pregnancies',
