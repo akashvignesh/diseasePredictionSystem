@@ -1,12 +1,16 @@
 FROM python:3.12.4
 
-WORKDIR /DISEASEPREDICTIONSYSTEM
+# Set the working directory
+WORKDIR /DISEASEPREDICTIONSYSTEM/Application/back_end
 
-COPY requirements.txt .
+# Copy the necessary files
+COPY ./Application /DISEASEPREDICTIONSYSTEM/Application
+COPY ./Model/disease_prediction_model.pkl /DISEASEPREDICTIONSYSTEM/Model/disease_prediction_model.pkl
+COPY ./Model/scaler.pkl /DISEASEPREDICTIONSYSTEM/Model/scaler.pkl
 
-# Copy the requirements file and install dependencies
-RUN pip install  -r requirements.txt
+# Install dependencies
+COPY requirements.txt /DISEASEPREDICTIONSYSTEM/requirements.txt
+RUN pip install -r /DISEASEPREDICTIONSYSTEM/requirements.txt
 
 # Run the application
-
-CMD ["python", "/Application/back_end/main.py"]
+CMD ["fastapi", "run", "main.py", "--port", "80"]

@@ -17,13 +17,15 @@ class Payload(BaseModel):
     BMI: float
     DiabetesPedigreeFunction: float
 
-predicts=joblib.load('D:\Code\ESDS_503\GIT\diseasePredictionSystem\Model\disease_prediction_model.pkl')
-diabetes_scaler = joblib.load('D:\Code\ESDS_503\GIT\diseasePredictionSystem\Model\scaler.pkl')    
+predicts=joblib.load('../../Model/disease_prediction_model.pkl')
+diabetes_scaler = joblib.load('../../Model/scaler.pkl')    
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World",
-            "Name": "f"}
+    return {"Name": "Akash Sureshkumar",
+            "Subject id":"503",
+            "Project Name": "Disease Prediction System"
+            }
 
 
 
