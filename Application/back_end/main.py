@@ -17,7 +17,7 @@ class Payload(BaseModel):
     BMI: float
     DiabetesPedigreeFunction: float
 
-predicts=joblib.load('../../Model/disease_prediction_model.pkl')
+predicts=joblib.load('../../Model/disease_prediction_model_version_two.pkl')
 diabetes_scaler = joblib.load('../../Model/scaler.pkl')    
 
 @app.get("/")

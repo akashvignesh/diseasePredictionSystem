@@ -5,7 +5,7 @@ WORKDIR /DISEASEPREDICTIONSYSTEM/Application/back_end
 
 # Copy the necessary files
 COPY ./Application /DISEASEPREDICTIONSYSTEM/Application
-COPY ./Model/disease_prediction_model.pkl /DISEASEPREDICTIONSYSTEM/Model/disease_prediction_model.pkl
+COPY ./Model/disease_prediction_model.pkl /DISEASEPREDICTIONSYSTEM/Model/disease_prediction_model_version_two.pkl
 COPY ./Model/scaler.pkl /DISEASEPREDICTIONSYSTEM/Model/scaler.pkl
 
 # Install dependencies
