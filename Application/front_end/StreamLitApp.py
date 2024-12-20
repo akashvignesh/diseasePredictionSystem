@@ -25,14 +25,10 @@ user_options={}
 import json
 # json.dump(streamlit_field_data, open("../front_end/streamlit_options.json", "w"), indent=2)
 current_dir = os.path.dirname(os.path.abspath(__file__))
+
 file_path = os.path.join(current_dir, "streamlit_options.json")
 print("Looking for:", file_path)
-
-if os.path.exists(file_path):
-    print("File found!")
-else:
-    print("File not found.")
-StreamLit_SlideBar= json.load(open("streamlit_options.json"))
+StreamLit_SlideBar= json.load(open(file_path))
 
 for field_name, range in StreamLit_SlideBar["slider_fields"].items():
     min_val, max_val = range
