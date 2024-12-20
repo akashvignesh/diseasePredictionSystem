@@ -5,7 +5,7 @@ import os
 import json
 # from collections import defaultdict
 # import pandas as pd
-# TestData = pd.read_csv("diabetes.csv") 
+# TestData = pd.read_csv("../../diabetes.csv") 
 
 # slider_fields = [
 #     'Pregnancies',
