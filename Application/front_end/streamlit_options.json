@@ -1,0 +1,36 @@
+{
+  "slider_fields": {
+    "Pregnancies": [
+      0,
+      17
+    ],
+    "Age": [
+      21,
+      81
+    ],
+    "Glucose": [
+      0,
+      199
+    ],
+    "BloodPressure": [
+      0,
+      122
+    ],
+    "SkinThickness": [
+      0,
+      99
+    ],
+    "Insulin": [
+      0,
+      846
+    ],
+    "BMI": [
+      0,
+      68
+    ],
+    "DiabetesPedigreeFunction": [
+      0,
+      3
+    ]
+  }
+}
