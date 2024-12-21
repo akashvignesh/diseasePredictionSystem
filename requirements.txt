@@ -11,3 +11,4 @@ imbalanced-learn
 ydata-profiling
 mlflow
 xgboost
+ipywidgets
