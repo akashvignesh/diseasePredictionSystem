@@ -19,12 +19,13 @@ import json
 
 # streamlit_field_data = defaultdict(dict)
 
-st.title('Disease Prediction System')
+
 # for field in slider_fields:
 #     streamlit_field_data["slider_fields"][field] = [math.floor(TestData[field].min()), math.ceil(TestData[field].max())]
 
 # json.dump(streamlit_field_data, open("../front_end/streamlit_options.json", "w"), indent=2)
 
+st.title('Disease Prediction System')
 user_options={}
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
