@@ -19,7 +19,7 @@ import json
 
 # streamlit_field_data = defaultdict(dict)
 
-# st.title('Disease Prediction System')
+st.title('Disease Prediction System')
 # for field in slider_fields:
 #     streamlit_field_data["slider_fields"][field] = [math.floor(TestData[field].min()), math.ceil(TestData[field].max())]
 
