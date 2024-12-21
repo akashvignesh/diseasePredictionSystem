@@ -25,7 +25,7 @@ import json
 
 # json.dump(streamlit_field_data, open("../front_end/streamlit_options.json", "w"), indent=2)
 
-# --- App Configuration ---
+
 st.set_page_config(
     page_title="Diabetes Prediction System",
     page_icon="🩺",
@@ -33,13 +33,13 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# --- Title and Description ---
+
 st.title('🩺 Diabetes Prediction System')
 st.write("""
 Welcome to the Diabetes Prediction System! Please input your health parameters in the sidebar, and we will predict the likelihood of diabetes using our Machine Learning Models.
 """)
 
-# --- Load Configuration ---
+
 user_options = {}
 current_dir = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(current_dir, "streamlit_options.json")
@@ -51,7 +51,7 @@ except FileNotFoundError:
     st.error("Configuration file not found. Please ensure 'streamlit_options.json' exists.")
     st.stop()
 
-# --- Sidebar for User Input ---
+
 st.sidebar.title("Input Parameters")
 st.sidebar.write("Adjust the sliders below to input your health details:")
 
@@ -64,7 +64,6 @@ for field_name, range_values in StreamLit_SlideBar.get("slider_fields", {}).item
         value=default_value
     )
 
-# --- Prediction Button ---
 if st.sidebar.button('🚀 Predict') or st.button('Predict'):
     st.sidebar.success('Submitting your data for prediction...')
     
@@ -86,8 +85,6 @@ if st.sidebar.button('🚀 Predict') or st.button('Predict'):
     
     except requests.exceptions.RequestException as e:
         st.error(f"❌ Connection Error: {e}")
-
-# --- Additional Insights ---
 st.markdown("---")
 st.write("""
 #### 📚 About the Model
@@ -95,6 +92,5 @@ Our model uses advanced machine learning techniques to predict diabetes likeliho
 Make sure to consult a medical professional for accurate diagnosis and advice.
 """)
 
-# --- Footer ---
 st.markdown("---")
 st.write("🚀 *Built with ❤️ using Streamlit & Machine Learning models.*")
