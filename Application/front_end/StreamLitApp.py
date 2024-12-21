@@ -80,7 +80,7 @@ if st.sidebar.button('🚀 Predict') or st.button('Predict'):
             
             st.write("### 🧠 Prediction Result:")
             st.write(f"**Prediction:** {result.get('prediction')}")
-            st.write(f"**Result:** {'Have Diabetes' if result.get('prediction') == 1 else 'Not Have Diabetes'}")
+            st.write(f"**Result:** {'Diabetes' if result.get('prediction') == 1 else 'No Diabetes'}")
         else:
             st.error(f"❌ Error: {response.status_code} - {response.text}")
     
